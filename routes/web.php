@@ -32,6 +32,9 @@ Route::get('/input', function () {
 Route::get('/form', function () {
     return view('form');
 });
+Route::get('/index', function () {
+    return view('index');
+});
 
 use App\Http\Controllers\InputController;
 
@@ -48,7 +51,7 @@ Route::prefix('toko')->group(function(){
 
     Route::get('/',
         [TokoController::class, 'index']);
-
+    
     Route::get('/detail',
         [TokoController::class, 'detail']);
 
